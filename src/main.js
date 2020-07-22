@@ -2,15 +2,31 @@
 //console.log( example );
 
 import data from './data/rickandmorty/rickandmorty.js';
-const datos = data.results;
+const datos = Object.values(data.results);
 
-let personajes = datos.slice(0, 99);
+console.log(datos)
 
-// PAGINA DE PERSONAJES
-console.log(window.location.pathname)
-if  (window.location.pathname === "/src/Personajes.html") { 
 
-function popUp(e) {
+
+
+for(const rickandmorty of (datos))
+{ console.log(rickandmorty.name)
+  console.log (rickandmorty.splash)};
+
+const nombres = datos.map(dato => dato.name); //map va a dato por dato y ejecuta una funcion//
+console.log(nombres);
+
+
+//filtrar
+const species = datos.filter(dato => dato.species); //map va a dato por dato y ejecuta una funcion//
+console.log(species);
+
+
+// se debe pintar en la pagina de personajes
+//console.log(window.location.personajes.html)
+//if  (window.location.pathname === "/src/Personajes.html") { 
+
+/*function popUp(e) {
 
   const indicator = e.target.dataset.personajes;
 
@@ -95,4 +111,4 @@ seasonButtons.innerHTML = chapters;
  
  console.log(chapters)
  // esta } es cierre de if de la ventana
-}; 
+}; */
