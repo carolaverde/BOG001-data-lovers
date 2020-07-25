@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rick and Morty - Personajes</title>
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rick and Morty - Personajes</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
 </head>
+
 <body>
   <main class="bloqueInfo">
     <!--foto inicio-->
@@ -15,22 +17,39 @@
     <section class="bannerLogo">
       <center><img class='logo' src="/img/logor.png" alt="logo"></center>
     </section>
+    <section class="generalButtons" id="generalButtons">
+      <nav class="buttonFilters">
+        <ul>
+          <li><a href="#">Genero</a>
+            <ul>
+              <li><a href="#" id="filterMen">Masculino</a></li>
+              <li><a href="#" id="filterWomen">Femenino</a></li>
+              <li><a href="#" id="other">Otro</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <nav class="organizeButton">
+        <ul>
+          <li><a href="#">Ordenar</a>
+            <ul>
+              <li><a href="#" id="organizeAZ">Alfabeticamente A-Z</a></li>
+              <li><a href="#" id="organizeZA">Alfabeticamente Z-A</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
 
+      
+    </section>
+    <div class="charactersZone" id="charactersZone">
 
+      <div class='pruebaTarjeta' id="pruebaTarjeta"></div>
+    </div>
+    <div id="root"></div>
+    <script src="main.js" type="module"></script>
 
-  
-    <br>
-    <br>
-
-<div class= "grid" id="charactersZone"></div>
-
-<div id="pruebaTarjeta"></div>
-
-
-
-  <div id="root"></div>
-  <script src="main.js" type="module"></script>
-
-   </main>  
+  </main>
 </body>
+
 </html>

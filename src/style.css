@@ -1,117 +1,140 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Patrick Hand', cursive;  
-    Word-wrap: break-Word;/*para que las palabras no se dividan mal hacia el otro renglon*/
-    
-}
-
-
-.bloqueInfo{
-    margin: 0;
-    padding: 0;
-    margin-bottom:2%;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Patrick Hand', cursive;
+  Word-wrap: break-Word;
+  /*para que las palabras no se dividan mal hacia el otro renglon*/
 
 }
 
 
+.bloqueInfo {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 2%;
 
-.imagenUno{
-    width: 100%;
+}
+
+
+
+.imagenUno {
+  width: 100%;
+  border-radius: 0% 1% 13% 21% / 10% 8% 17% 16% ;
+  box-shadow: 8px 8px 4px #c89277;;
+
+}
+
+.bannerLogo {
+  width: 100%;
+  height: 25%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  background-color: #EA9425;
+}
+
+.logo {
+  width: 15%;
+  height: 20%;
+
+}
+
+.sinopsis {
+  padding: 5%;
+
+
+}
+
+
+.menuButtons {
+  display: flex;
+  justify-content: space-around;
+
+
+}
+
+.pngButtons {
+  width: 10%;
+  height: 10%;
+}
+
+.generalButtons{
+  padding: 10%;
+ display: flex;
+ justify-content:space-evenly;
+ }
+
+ .buttonFilters{
+   padding: 3%;
+   background-color: #fbc2a0;
+   border-radius: 10%;
+   font-size: 35pt;
+   color: #f47e44;
+ } 
+
+ nav ul li{
+   list-style: none;
+   
+ }
+
+ nav ul li ul{  /*esta es para ocultar la lista que lleva genero y ordenar*/
+   padding: 3%;
+   display: none;
+   position: absolute;
+   background-color: #f0dfd6;
+ }
+
+ nav ul li:hover ul{ /*esta es para que aparezcan cuando se pasa el mouse por encima*/
+  display: block;
+ }
+
+ nav ul li ul li a{
+   white-space: nowrap;
+   text-decoration: none; /*para quitar la linea debajo del link*/
+ }
+
+ nav ul li ul li a:hover { /*este hace  que cambie de color  el menu cuando se pasa el mouse*/
+  background-color: #f8ba87 ;
+ }
+
+ .organizeButton{
+  padding: 3%;
+  background-color: #fbc2a0;
+  border-radius: 10%;
+  font-size: 35pt;
+  color: #f47e44;
   
+} 
+
+.charactersZone {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.individualPersonajes {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f47e44;
+  padding: 5%;
+  height: 30%;
+  margin: 2%;
+  border-radius: 4em; 
+  box-shadow: 5px 5px 3px #c96539;
+}
+.photoSola{
+ border: 20px #61b3a8 solid; 
+ border-radius: 48% 52% 42% 45% / 81% 78% 33% 30%;
+}
+.name {
+  display: flex;
+  flex: content;
+  color: white;
+
 }
 
-.bannerLogo{
-    width: 100%;
-    height: 25%;
-    margin-top: 1%;
-    margin-bottom: 1%;
-    background-color: #EA9425 ;
-}
-
-.logo{
-    width: 15%;
-    height: 20%;
-
-}
-
-.sinopsis{
-    padding: 5%;
-
-    
-}
-
-
-.menuButtons{
-display: flex;
-justify-content: space-around;
-
-
-}
-.pngButtons{
-    width: 10%;
-    height: 10%;
-}
-
-
-  .contenedorUno {
-    margin: 0;
-    padding: 0;
-    background-color: #BBDA94;
-    width: 100%;
-}
-.titulo {
-    align-items: center;
-    font-size: 4em;
-}
-
-
-  .imagenUno {
-      margin: 0;
-      padding: 0;
-      max-width: 100%;
-  }
-
-  .grid {
-    background-color: #FC9B57;
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 800px;
-    margin: auto;
-    justify-content: space-around;
-    
-  }
-
-.personajes1 {
-    align-items: center;
-    background-color: #F48134;
-    box-shadow: #D8702A;
-    color: white;
-    display: flex;
-    height: 150px;
-    width: 150px;  
-    justify-content: center;
-    border-radius: 2em;
-    padding-left: 0em;
-    padding-right: 0em;
-    padding-top: 1em;
-    box-sizing: border-box; 
-    margin: 1em;
-    font-size: 1em;
-    border: 0;
-    flex-direction: column
-}
-.nombres {
-    word-break: break-word;
-}
-
-.image {
-    width: 70% ; 
-    border-radius: 1em;
-
-}
 .root {
-    background-color: rgb(159, 190, 115);
+ background-color: rgb(159, 190, 115);
 
 }
 
@@ -120,18 +143,38 @@ justify-content: space-around;
     font-size: 2em;
 }
 
-/* Computador  */
-@media   (min-width: 780px) and (max-width: 1024px){};
+/* pantalla grande  */
+@media screen and (max-width: 1920px) {
+  body {
+    background-color: rgb(128, 238, 25);
+  }
 
-/* Tablet */
-@media   (min-width: 480px) and (max-width: 780px) {};
+}
 
-/* Celular */
-@media   (max-width: 480px){
+/*pantalla normal */
+@media screen and (max-width: 1280px) {
+  body {
+    background-color: #d38dc1
+  }
 
-    .personajes1 {
+}
 
-        background-color: darkorange;
-        border-radius: 2em;
-    }
-};
+/* tableta */
+@media screen and (max-width: 800px) {
+
+  body {
+
+    background-color: #f79764;
+
+  }
+}
+
+/* celular */
+@media screen and (max-width: 480px) {
+
+  body {
+
+    background-color: #f79764;
+
+  }
+}
