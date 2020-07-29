@@ -1,13 +1,66 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body{
   font-family: 'Patrick Hand', cursive;
-  Word-wrap: break-Word;
-  /*para que las palabras no se dividan mal hacia el otro renglon*/
+  Word-wrap: break-Word;  /*para que las palabras no se dividan mal hacia el otro renglon*/
+}
+/* ***********************************header y menu hamburguesa**********************************************/
+header{
+ /* background: #000000; /* Old browsers */
+ /* background: -moz-linear-gradient(-45deg,  #000000 42%, #691dd7 74%, #691dd7 74%, #4737a2 100%); /* FF3.6-15 */
+  /*background: -webkit-linear-gradient(-45deg,  #000000 42%,#691dd7 74%,#691dd7 74%,#4737a2 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg,  #000000 42%,#691dd7 74%,#691dd7 74%,#4737a2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#4737a2',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  width: 100%;
+}
+
+.menuSpace{
+  height: 70px;
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .logo{
+  height: 70px;
+}
+
+.logo img{
+
+  height: 100%;
+  vertical-align: top;
+}
+.logoName{
+  width: px;
+}
+
+nav a{
+  color: #f2f2f2;
+  text-decoration: none;
+  font-weight: 300;
+  margin-right: 10px;
+}
+
+.hamburguesa{
+  height: 100%;
+  /*width: 70%;*/
+  text-align: center;
+  display: none;
 
 }
 
+.hamburguesa img{
+  vertical-align: top;
+  padding: 23px;
 
+}
+/*****************************************************/
 .bloqueInfo {
   margin: 0;
   padding: 0;
@@ -19,12 +72,13 @@
 
 .imagenUno {
   width: 100%;
-  border-radius: 0% 1% 13% 21% / 10% 8% 17% 16% ;
-  box-shadow: 8px 8px 4px #c89277;;
+  border-radius: 0% 1% 13% 21% / 10% 8% 17% 16%;
+  box-shadow: 8px 8px 4px #c89277;
+  ;
 
 }
 
-.bannerLogo {
+/*.bannerLogo {
   width: 100%;
   height: 25%;
   margin-top: 1%;
@@ -32,11 +86,11 @@
   background-color: #EA9425;
 }
 
-.logo {
+/*.logo {
   width: 15%;
   height: 20%;
 
-}
+}*/
 
 .sinopsis {
   padding: 5%;
@@ -48,8 +102,6 @@
 .menuButtons {
   display: flex;
   justify-content: space-around;
-
-
 }
 
 .pngButtons {
@@ -57,75 +109,86 @@
   height: 10%;
 }
 
-.generalButtons{
+.generalButtons {
   padding: 10%;
- display: flex;
- justify-content:space-evenly;
- }
+  display: flex;
+  justify-content: space-evenly;
+}
 
- .buttonFilters{
-   padding: 3%;
-   background-color: #fbc2a0;
-   border-radius: 10%;
-   font-size: 35pt;
-   color: #f47e44;
- } 
-
- nav ul li{
-   list-style: none;
-   
- }
-
- nav ul li ul{  /*esta es para ocultar la lista que lleva genero y ordenar*/
-   padding: 3%;
-   display: none;
-   position: absolute;
-   background-color: #f0dfd6;
- }
-
- nav ul li:hover ul{ /*esta es para que aparezcan cuando se pasa el mouse por encima*/
-  display: block;
- }
-
- nav ul li ul li a{
-   white-space: nowrap;
-   text-decoration: none; /*para quitar la linea debajo del link*/
- }
-
- nav ul li ul li a:hover { /*este hace  que cambie de color  el menu cuando se pasa el mouse*/
-  background-color: #f8ba87 ;
- }
-
- .organizeButton{
+.buttonFilters {
   padding: 3%;
   background-color: #fbc2a0;
   border-radius: 10%;
   font-size: 35pt;
   color: #f47e44;
-  
-} 
+}
 
-.charactersZone {
+nav ul li {
+  list-style: none;
+
+}
+
+nav ul li ul {
+  /*esta es para ocultar la lista que lleva genero y ordenar*/
+  padding: 3%;
+  display: none;
+  position: absolute;
+  background-color: #f0dfd6;
+}
+
+nav ul li:hover ul {
+  /*esta es para que aparezcan cuando se pasa el mouse por encima*/
+  display: block;
+}
+
+nav ul li ul li a {
+  white-space: nowrap;
+  text-decoration: none;
+  /*para quitar la linea debajo del link*/
+}
+
+nav ul li ul li a:hover {
+  /*este hace  que cambie de color  el menu cuando se pasa el mouse*/
+  background-color: #f8ba87;
+}
+
+.organizeButton {
+  padding: 2%;
+  background-color: #fbc2a0;
+  border-radius: 10%;
+  font-size: 35pt;
+  color: #f47e44;
+
+}
+
+.imageArea {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
 }
-.individualPersonajes {
 
+.individualPersonajes {
+  width: 200px;
+  height: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #f47e44;
-  padding: 5%;
-  height: 30%;
+  padding: 20px;
   margin: 2%;
-  border-radius: 4em; 
+  border-radius: 4em;
   box-shadow: 5px 5px 3px #c96539;
+  border-color: transparent;
 }
-.photoSola{
- border: 20px #61b3a8 solid; 
- border-radius: 48% 52% 42% 45% / 81% 78% 33% 30%;
+
+.photoSola {
+  width: 120px;
+  border: 5px #61b3a8 solid;
+  border-radius: 48% 52% 42% 45% / 81% 78% 33% 30%;
 }
+
 .name {
   display: flex;
   flex: content;
@@ -134,13 +197,13 @@
 }
 
 .root {
- background-color: rgb(159, 190, 115);
+  background-color: rgb(159, 190, 115);
 
 }
 
 .Sinopsis {
 
-    font-size: 2em;
+  font-size: 2em;
 }
 
 /* pantalla grande  */
@@ -157,16 +220,37 @@
     background-color: #d38dc1
   }
 
+  
 }
 
 /* tableta */
 @media screen and (max-width: 800px) {
+  .hamburguesa{
+    display: block;
+  }
 
+  .enlaces{
+    position: fixed;
+    background: #691dd7 ;
+    left: 0;
+    top: 70px;
+    width: 40%;
+    height: 30vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    transform: translateX(-100%);
+  }
+  .enlaces2{
+    transform: translateX(0%);
+  }
   body {
-
     background-color: #f79764;
 
   }
+
+ 
 }
 
 /* celular */
@@ -177,4 +261,6 @@
     background-color: #f79764;
 
   }
+
+ 
 }

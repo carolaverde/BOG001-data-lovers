@@ -15,8 +15,9 @@
     <img class="imagenUno" src="/img/Personajes.jpg" alt="photo Rick and Morty"><br>
     <!--logo-->
     <section class="bannerLogo">
-      <center><img class='logo' src="/img/logor.png" alt="logo"></center>
+      <img class='logo' src="/img/logor.png" alt="logo">
     </section>
+    <!--botones para filtrar-->
     <section class="generalButtons" id="generalButtons">
       <nav class="buttonFilters">
         <ul>
@@ -42,10 +43,21 @@
 
       
     </section>
-    <div class="charactersZone" id="charactersZone">
+    <!--imagenes botones-->
+    <div class="imageArea" id="charactersZone">
 
       <div class='pruebaTarjeta' id="pruebaTarjeta"></div>
     </div>
+    <!--ventana emergente-->
+    <article class="modalWindow" id="modal">
+      <div class="windowRepose" id="windRepose"></div>
+       <div class="infoWindowRepose" id="infoWin_Repose"></div>
+       <p class="alin-right">cerrar<span>x</span>/p>
+      <div class="windowName" id="win_Name"></div>
+      <div class="windowGender" id="win_Gender"></div>
+      <div class="windowSpecies" id="win_Species"></div>
+    </article>
+
     <div id="root"></div>
     <script src="main.js" type="module"></script>
 
