@@ -52,6 +52,7 @@ nav a{
   /*width: 70%;*/
   text-align: center;
   display: none;
+  
 
 }
 
@@ -63,41 +64,22 @@ nav a{
 /*****************************************************/
 .bloqueInfo {
   margin: 0;
-  padding: 0;
+  padding: top 1px;;
   margin-bottom: 2%;
 
 }
 
-
-
 .imagenUno {
   width: 100%;
-  border-radius: 0% 1% 13% 21% / 10% 8% 17% 16%;
+  border-radius: 0% 0% 13% 21% / 10% 8% 17% 16%;
   box-shadow: 8px 8px 4px #c89277;
   ;
 
 }
 
-/*.bannerLogo {
-  width: 100%;
-  height: 25%;
-  margin-top: 1%;
-  margin-bottom: 1%;
-  background-color: #EA9425;
-}
-
-/*.logo {
-  width: 15%;
-  height: 20%;
-
-}*/
-
 .sinopsis {
   padding: 5%;
-
-
 }
-
 
 .menuButtons {
   display: flex;
@@ -119,7 +101,7 @@ nav a{
   padding: 3%;
   background-color: #fbc2a0;
   border-radius: 10%;
-  font-size: 35pt;
+  font-size: 25pt;
   color: #f47e44;
 }
 
@@ -156,7 +138,7 @@ nav ul li ul li a:hover {
   padding: 2%;
   background-color: #fbc2a0;
   border-radius: 10%;
-  font-size: 35pt;
+  font-size: 25pt;
   color: #f47e44;
 
 }
@@ -195,6 +177,7 @@ nav ul li ul li a:hover {
   color: white;
 
 }
+
 
 .root {
   background-color: rgb(159, 190, 115);
