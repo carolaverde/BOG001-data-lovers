@@ -142,24 +142,32 @@ nav ul li ul li a:hover {
   color: #f47e44;
 
 }
-
-.imageArea {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: auto;
+/*********************tarjetas individuales****************************************/
+.imageArea {  /*este contenedor tiene a pruebaTarjeta*/
+ /*display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+ justify-content: center;*/
+    
 }
 
-.individualPersonajes {
+.pruebaTarjeta{
+ display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+ justify-content: center;
+  
+}
+
+.individualCard {
   width: 200px;
   height: 200px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  /*display: flex;
+  /*flex-direction: column;*/
+  /*align-items: center;*/
   background-color: #f47e44;
   padding: 20px;
-  margin: 2%;
+  margin: 15px;
   border-radius: 4em;
   box-shadow: 5px 5px 3px #c96539;
   border-color: transparent;
@@ -171,14 +179,14 @@ nav ul li ul li a:hover {
   border-radius: 48% 52% 42% 45% / 81% 78% 33% 30%;
 }
 
-.name {
+/*.name {
   display: flex;
   flex: content;
   color: white;
 
 }
 
-
+/*********************************root************************************/
 .root {
   background-color: rgb(159, 190, 115);
 

@@ -1,7 +1,7 @@
 //menu hamburguesa
 const enlaces = document.getElementsByClassName('enlaces')[0];
 const hamburguesa = document.getElementsByClassName('hamburguesa')[0];
-const menuHamburguesa = document.getElementById('hamburguesa');
+//const menuHamburguesa = document.getElementById('hamburguesa');
 let open = false;
 
 const toggleMenu = () => {
@@ -46,19 +46,38 @@ const charactersZone = document.getElementById('charactersZone');
 
 //charactersZone.innerHTML= datos;
 //ciclo for of podemos recorrer cualquier tipo de array
-
-let dataBrought = info.slice(0,99);   // datos traidos y vamos a coger un parte de la información
-console.log(dataBrought)
+/*informacion modal*/
+let dataBrought = info.slice(0, 99); // datos traidos y vamos a coger un parte de la información
 let compilado = [];
 
-for(let i = 0; i < dataBrought.length; i++){
-compilado += `<img class="photoSola" src="${dataBrought[i].image}" alt=""><p>Mi nombre es ${dataBrought[i].name}</p>`
-console.log(compilado)
+/*for de las tarjetetas*/
+for (let i = 0; i < dataBrought.length; i++) {
+  compilado += `<button data-idpersonaje = "${dataBrought[i].id}" class= "individualCard" id = "${dataBrought[i].id}" ><img data-idpersonaje = "${dataBrought[i].id}" class="photoSola" src="${dataBrought[i].image}" alt=""><p>Name: ${dataBrought[i].name}</p></button>`
 }
 
-
-
 let printImage = document.getElementById('pruebaTarjeta');
-printImage.innerHTML=compilado;
+printImage.innerHTML = compilado;
 
+/*****************informacion de la modal**************/
+//document.getElementById(`${dataBrought[i].id}`)
+function clicTarjetasUn() {
+  let todaslasTarjetas = document.querySelectorAll('.individualCard')
+  for (let i = 0; i < todaslasTarjetas.length; i++) {
+    todaslasTarjetas[i].addEventListener('click', function(evento){CallModal(evento)}); //forma de llamar la modal
+  }
+}
+clicTarjetasUn();
+
+function CallModal(evento) {
+  /*let infoModal = [];
+  for (let i = 0; i < dataBrought.length; i++) {
+    infoModal += `<div class= "individualCard" id = "${dataBrought[i].id}" ><img class="photoSola" src="${dataBrought[i].image}" alt=""><p>Name: ${dataBrought[i].name}</p><p>Gender: ${dataBrought[i].gender}</p><p>Species: ${dataBrought[i].species}</p><p>Status: ${dataBrought[i].status}</p>
+</div>`
+    console.log(infoModal)
+  }*/ 
+  let idPersonaje = evento.target.dataset.idpersonaje
+
+  let busqueda = dataBrought.find(personaje => personaje.id  === parseInt(idPersonaje))
+  console.log(busqueda)
+}
 

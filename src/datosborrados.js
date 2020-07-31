@@ -1,5 +1,5 @@
-function pintarTarjetas(Personajes) {
-    for (const personaje of Personajes) {
+/*function pintarTarjetas(Personajes) {
+    for (const personaje of Personajes) {*/
       //console.log(personaje.name);
       //const nombreP = document.createElement('h1');
       //nombreP.textContent = rickandmorty.name;
@@ -7,10 +7,10 @@ function pintarTarjetas(Personajes) {
   
       //insertando imagen y nombre individual
       //console.log(personaje.image);
-      pruebaTarjeta.insertAdjacentHTML('afterend',
-        `<button class ='individualPersonajes' id = ${personaje.id}>
+     /*pruebaTarjeta.insertAdjacentHTML('afterend',
+       `<button class ='individualPersonajes' id = ${personaje.id}>
       <img class = 'photoSola' src = "${personaje.image}">
-      <p class = 'name'>${personaje.name}</p>
+     <p class = 'name'>${personaje.name}</p>
     </button>`); //template string
   
   
@@ -21,9 +21,9 @@ function pintarTarjetas(Personajes) {
   
       document.getElementById('individualPersonajes').appendChild(buttonImage);*/
   
-    }
-  }
-  let infoArray = datos.slice(0, 99) //slice se usa para cortar un pedazo del array
+    
+  
+  /*let infoArray = datos.slice(0, 99) //slice se usa para cortar un pedazo del array
   console.log(infoArray)
   //for (x=0; x< ; x++);
   let compilado = [];
@@ -51,4 +51,4 @@ function pintarTarjetas(Personajes) {
   pintarTarjetas(datos);
   
   //window modal
-  
+  */
