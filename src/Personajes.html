@@ -1,39 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content= "width=device-width, initial-scale=1.0">
-    <title>Rick and Morty</title>
-    <link rel="icon" type="image/jpg" href="img/img-pestana.png">
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
-  </head>
-  
-  <body>
-    <header>
-      <nav class="menuSpace">
-        <div class="logo">
-          <img src="img/img-menu.png" alt="imagen-menu">
-          <img class='logoName' src="/img/logor.png" alt="logo">
-        </div>
-        <div class="enlaces">
-          <a href="index.html">inicio</a>
-          <a href="Personajes.html">Personajes</a>
-          <a href="Mundo.html">Mundo</a>
-        </div>
-        <!--mennu hamburguesa-->
-        <div class="hamburguesa">
-          <img src="img/menu-alt-right-regular-24.png" alt="" id="hamburguesa">
-          
-        </div>
-      </nav>
-    </header>
-  
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rick and Morty</title>
+  <link rel="icon" type="image/jpg" href="img/img-pestana.png">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <nav class="menuSpace">
+      <div class="logo">
+        <img src="img/img-menu.png" alt="imagen-menu">
+        <img class='logoName' src="/img/logor.png" alt="logo">
+      </div>
+      <div class="enlaces">
+        <a href="index.html">inicio</a>
+        <a href="Personajes.html">Personajes</a>
+        <a href="Mundo.html">Mundo</a>
+      </div>
+      <!--mennu hamburguesa-->
+      <div class="hamburguesa">
+        <img src="img/menu-alt-right-regular-24.png" alt="" id="hamburguesa">
+
+      </div>
+    </nav>
+  </header>
+
   <main class="bloqueInfo">
     <!--foto inicio-->
     <img class="imagenUno" src="/img/Personajes.jpg" alt="photo Rick and Morty"><br>
     <!--logo-->
-     <!--botones para filtrar-->
+    <!--botones para filtrar-->
     <section class="generalButtons" id="generalButtons">
       <nav class="buttonFilters">
         <ul>
@@ -57,27 +58,28 @@
         </ul>
       </nav>
 
-      
+
     </section>
     <!--imagenes botones-->
     <div class="imageArea" id="charactersZone">
 
-      <div class='pruebaTarjeta' id="pruebaTarjeta"></div>
-    </div>
-    <!--ventana emergente-->
-    <article class="modalWindow" id="modal">
-      <div class="windowRepose" id="windRepose"></div>
-       <div class="infoWindowRepose" id="infoWin_Repose"></div>
-       <p class="alin-right">cerrar<span>x</span>/p>
-        <img src="#" alt="">
-      <div class="windowName" id="win_Name"></div>
-      <div class="windowGender" id="win_Gender"></div>
-      <div class="windowSpecies" id="win_Species"></div>
-    </article>
+      <div class='pruebaTarjeta' id="pruebaTarjeta">
+        <article class="modalWindow" id="modal">
+          <div class="fondo_transparente">
+            <div class="modal">
+              <div class="modal_cerrar">
+                <span>x</span>
+              </div>
+              <div class="modal_mensaje">
+                <p></p>
+              </div>
+            </div>
+          </article>
 
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
 
+        <div id="root"></div>
+        <script src="main.js" type="module"></script>
+      </div>
   </main>
 </body>
 

@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 //menu hamburguesa
 const enlaces = document.getElementsByClassName('enlaces')[0];
 const hamburguesa = document.getElementsByClassName('hamburguesa')[0];
@@ -47,37 +48,86 @@ const charactersZone = document.getElementById('charactersZone');
 //charactersZone.innerHTML= datos;
 //ciclo for of podemos recorrer cualquier tipo de array
 /*informacion modal*/
-let dataBrought = info.slice(0, 99); // datos traidos y vamos a coger un parte de la información
+let getData = info.slice(0, 99); // datos traidos y vamos a coger un parte de la información
 let compilado = [];
 
 /*for de las tarjetetas*/
-for (let i = 0; i < dataBrought.length; i++) {
-  compilado += `<button data-idpersonaje = "${dataBrought[i].id}" class= "individualCard" id = "${dataBrought[i].id}" ><img data-idpersonaje = "${dataBrought[i].id}" class="photoSola" src="${dataBrought[i].image}" alt=""><p>Name: ${dataBrought[i].name}</p></button>`
+for (let i = 0; i < getData.length; i++) {
+  compilado += `<button data-idpersonaje = "${getData[i].id}" class= "individualCard" id = "${getData[i].id}" ><img data-idpersonaje = "${getData[i].id}" class="photoSola" src="${getData[i].image}" alt=""><p>Name: ${getData[i].name}</p></button>`
 }
 
 let printImage = document.getElementById('pruebaTarjeta');
 printImage.innerHTML = compilado;
 
 /*****************informacion de la modal**************/
-//document.getElementById(`${dataBrought[i].id}`)
 function clicTarjetasUn() {
   let todaslasTarjetas = document.querySelectorAll('.individualCard')
   for (let i = 0; i < todaslasTarjetas.length; i++) {
-    todaslasTarjetas[i].addEventListener('click', function(evento){CallModal(evento)}); //forma de llamar la modal
+    todaslasTarjetas[i].addEventListener('click', function (evento) {
+      CallModal(evento)
+    }); //forma de llamar la modal
   }
 }
 clicTarjetasUn();
 
 function CallModal(evento) {
-  /*let infoModal = [];
-  for (let i = 0; i < dataBrought.length; i++) {
-    infoModal += `<div class= "individualCard" id = "${dataBrought[i].id}" ><img class="photoSola" src="${dataBrought[i].image}" alt=""><p>Name: ${dataBrought[i].name}</p><p>Gender: ${dataBrought[i].gender}</p><p>Species: ${dataBrought[i].species}</p><p>Status: ${dataBrought[i].status}</p>
-</div>`
-    console.log(infoModal)
-  }*/ 
   let idPersonaje = evento.target.dataset.idpersonaje
 
-  let busqueda = dataBrought.find(personaje => personaje.id  === parseInt(idPersonaje))
-  console.log(busqueda)
+  let busqueda = getData.find(personaje => personaje.id === parseInt(idPersonaje))
+
+
+  let image = busqueda.image
+  console.log(image)
+  let name = busqueda.name
+  console.log(name)
+  let gender = busqueda.gender
+  console.log(gender)
+  let specie = busqueda.species
+  console.log(specie)
+  let statuscharacther = busqueda.status
+  console.log(statuscharacther)
+
+
+  let modal_mensaje = `<div class="modal"> <div class = "imagenModal"><img src = "${image}" ></div><div class = "textoModal"><p>Name: "${name}"</p> <p>Gender: "${gender}" </p> <p>Specie: "${specie}" </p> <p>Status: "${statuscharacther}"</p></div> <div class="modal_cerrar">
+  <span>x</span></div></div> `
+  pruebaTarjeta.innerHTML = modal_mensaje
+
+
+  document.getElementsByClassName("modal_cerrar")[0].addEventListener("click", function () {
+    document.getElementsByClassName("fondo_transparente")[0].style.display = "none";
+  })
 }
 
+/*document.getElementsByClassName("individualCard").addEventListener("click", function(){
+  document.getElementsByClassName("modal")[0].style.display="block"
+  return false
+})*/
+
+let botonFiltroM = document.getElementById("filterMen").addEventListener("click", function () {
+  let filtrandoM= getData.filter(item =>{
+    return (item.gender === "Male");
+  })
+  console.log("filterM")
+})
+
+let botonFiltrow = document.getElementById("filterWomen").addEventListener("click", function () {
+  let filtrandoW= getData.filter(item =>{
+    return (item.gender === "Female");
+  })
+  console.log("filtrandoW")
+})
+
+
+let botonAZ = document.getElementById("organizeAZ").addEventListener("click", function(){
+  getData.sort(function(a, b) {
+    return a - b;
+  });
+  console.log("botonAZ");
+})
+
+let botonZA = document.getElementById("organizeZA").addEventListener("click", function(){
+  getData.sort(function(a, b) {
+    return a - b;
+  });
+  console.log("botonZA");
+})

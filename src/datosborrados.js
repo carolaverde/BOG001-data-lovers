@@ -51,4 +51,37 @@
   pintarTarjetas(datos);
   
   //window modal
-  */
+  *//*
+let image = busqueda.image
+console.log(image)
+let name = busqueda.name
+console.log(name)
+let gender = busqueda.gender
+console.log(gender)
+let specie = busqueda.species
+console.log(specie)
+let statuscharacther = busqueda.status 
+console.log(statuscharacther)
+
+
+let modal_mensaje = `<div class="modal"> <div class = "imagenModal"><img src = "${image}" ></div><div class = "textoModal"><p>Name: "${name}"</p> <p>Gender: "${gender}" </p> <p>Specie: "${specie}" </p> <p>Status: "${statuscharacther}"</p></div> <div class="modal_cerrar">
+<span>x</span></div></div> `
+pruebaTarjeta.innerHTML = modal_mensaje
+}
+
+
+
+
+let infoModal = [];
+for (let i = 0; i < getData.length; i++) {
+  infoModal += `<div class= "individualCard" id = "${getData[i].id}" ><img class="photoSola" src="${getData[i].image}" alt=""><p>Name: ${getData[i].name}</p><p>Gender: ${getData[i].gender}</p><p>Species: ${getData[i].species}</p><p>Status: ${getData[i].status}</p>
+</div>`
+  console.log(infoModal)}
+
+
+
+
+
+
+  
+  
