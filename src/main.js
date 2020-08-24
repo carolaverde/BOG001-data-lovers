@@ -1,35 +1,5 @@
 /* eslint-disable no-undef */
-//menu hamburguesa
-const enlaces = document.getElementsByClassName('enlaces')[0];
-const hamburguesa = document.getElementsByClassName('hamburguesa')[0];
-//const menuHamburguesa = document.getElementById('hamburguesa');
-let open = false;
 
-const toggleMenu = () => {
-  enlaces.classList.toggle('enlaces2');
-  enlaces.style.transition = 'transform 0.5s ease-in-out'
-}
-
-/*window.addEventListener('click', function(){
-  toggleMenu();
-})*/
-//con este evento estamos diciendo cuando el usuario tiene abierto el menu hamburguesa
-hamburguesa.addEventListener('click', function () {
-  toggleMenu();
-  if (document.querySelector('.enlaces.enlaces2')) {
-    open = true;
-  } else {
-    open = false;
-  }
-})
-
-window.addEventListener('resize', function () {
-  if (screen.width > 800) {
-    toggleMenu();
-    enlaces.style.transition = 'none';
-    open = false;
-  }
-})
 
 
 //import { example } from './data.js';	
@@ -49,15 +19,24 @@ const charactersZone = document.getElementById('charactersZone');
 //ciclo for of podemos recorrer cualquier tipo de array
 /*informacion modal*/
 let getData = info.slice(0, 99); // datos traidos y vamos a coger un parte de la información
-let compilado = [];
-
-/*for de las tarjetetas*/
-for (let i = 0; i < getData.length; i++) {
-  compilado += `<button data-idpersonaje = "${getData[i].id}" class= "individualCard" id = "${getData[i].id}" ><img data-idpersonaje = "${getData[i].id}" class="photoSola" src="${getData[i].image}" alt=""><p>Name: ${getData[i].name}</p></button>`
-}
-
+let compilado;
 let printImage = document.getElementById('pruebaTarjeta');
-printImage.innerHTML = compilado;
+
+
+/*for de las tarjetas*/
+function pintarTarjetas(datosPersonajes) {
+  printImage.innerHTML = " ";
+  compilado = "";
+  for (let i = 0; i < datosPersonajes.length; i++) {
+    compilado += `<button data-idpersonaje = "${datosPersonajes[i].id}" class= "individualCard" id = "${datosPersonajes[i].id}" ><img data-idpersonaje = "${datosPersonajes[i].id}" class="photoSola" src="${datosPersonajes[i].image}" alt=""><p>Name: ${datosPersonajes[i].name}</p></button>`
+  }
+  
+ 
+  printImage.innerHTML = compilado;
+}
+ window.onload = pintarTarjetas(getData);
+
+
 
 /*****************informacion de la modal**************/
 function clicTarjetasUn() {
@@ -77,57 +56,184 @@ function CallModal(evento) {
 
 
   let image = busqueda.image
-  console.log(image)
+  //console.log(image)
   let name = busqueda.name
-  console.log(name)
+  //console.log(name)
   let gender = busqueda.gender
-  console.log(gender)
+  //console.log(gender)
   let specie = busqueda.species
-  console.log(specie)
+  //console.log(specie)
   let statuscharacther = busqueda.status
-  console.log(statuscharacther)
+  //console.log(statuscharacther)
 
 
-  let modal_mensaje = `<div class="modal"> <div class = "imagenModal"><img src = "${image}" ></div><div class = "textoModal"><p>Name: "${name}"</p> <p>Gender: "${gender}" </p> <p>Specie: "${specie}" </p> <p>Status: "${statuscharacther}"</p></div> <div class="modal_cerrar">
-  <span>x</span></div></div> `
-  pruebaTarjeta.innerHTML = modal_mensaje
+  let modal_mensaje = `<div class="modal"> <div class = "imagenModal"><img src = "${image}" ></div>
+                      <div class = "textoModal"><p>Name: "${name}"</p>
+                      <p>Gender: "${gender}" </p>
+                      <p>Specie: "${specie}" </p>
+                      <p>Status: "${statuscharacther}"</p></div>
+                      <div class="modal_cerrar"><span class="close" id="close">x</span>
+                      </div>`
 
+  modal.innerHTML = modal_mensaje
 
-  document.getElementsByClassName("modal_cerrar")[0].addEventListener("click", function () {
-    document.getElementsByClassName("fondo_transparente")[0].style.display = "none";
-  })
 }
+/* document.getElementsByClassName("modal_cerrar")[0].addEventListener("click", function () {
+   document.getElementsByClassName("fondo_transparente")[0].style.display = "none";
+ })*/
+
 
 /*document.getElementsByClassName("individualCard").addEventListener("click", function(){
   document.getElementsByClassName("modal")[0].style.display="block"
   return false
 })*/
 
-let botonFiltroM = document.getElementById("filterMen").addEventListener("click", function () {
-  let filtrandoM= getData.filter(item =>{
-    return (item.gender === "Male");
-  })
-  console.log("filterM")
-})
-
-let botonFiltrow = document.getElementById("filterWomen").addEventListener("click", function () {
-  let filtrandoW= getData.filter(item =>{
-    return (item.gender === "Female");
-  })
-  console.log("filtrandoW")
-})
 
 
-let botonAZ = document.getElementById("organizeAZ").addEventListener("click", function(){
-  getData.sort(function(a, b) {
-    return a - b;
-  });
-  console.log("botonAZ");
+//CLICK FILTRAR
+//hacer clic al boton
+//traer datos que vamos a usar
+//recorrer los datos para  saber cual es men
+//filtrar datos
+//guardar  los datos obtenidos 
+//pintar las tarjetas  de datos filtrados 
+
+//pintar filtro hombres
+
+document.getElementById("filterMen").addEventListener("click", function () {
+  
+      let resultadosFilterM = getData.filter(elemento => elemento.gender === "Male")
+      //console.log(resultadosFilterM)
+          
+      pintarTarjetas(resultadosFilterM)
+    }
+)
+
+//pintar filtro mujeres
+document.getElementById("filterWomen").addEventListener("click", function () {
+  
+  let resultadosFilterW = getData.filter(elemento => elemento.gender === "Female")
+  //console.log(resultadosFilterW )
+      
+  pintarTarjetas(resultadosFilterW )
+}
+)
+
+//ordenar alfabeticamente A-Z
+//hacer clic al boton
+//traer datos a usar
+//recorrer los datos
+//order datos de AZ
+//guardar datos obtenidos
+//pintar datos ordenados
+
+
+document.getElementById("organizeAZ").addEventListener("click", function(){
+  let  ordenAZ = getData.sort(function (a,b){
+    if(a.name > b.name){
+      return 1;
+    }
+  if (a.name < b.name){
+    return -1;
+  }
+  return 0;
+  }
+
+
+  )
+  //console.log(ordenAZ);
+
+  pintarTarjetas(ordenAZ);
 })
 
-let botonZA = document.getElementById("organizeZA").addEventListener("click", function(){
-  getData.sort(function(a, b) {
-    return a - b;
-  });
-  console.log("botonZA");
+//ordenar alfabeticamente Z-A
+document.getElementById("organizeZA").addEventListener("click", function(){
+  let  ordenZA = getData.sort(function (a,b){
+    if(a.name < b.name){
+      return 1;
+    }
+  if (a.name > b.name){
+    return -1;
+  }
+  return 0;
+  }
+
+
+  )
+ 
+  pintarTarjetas(ordenZA);
 })
+
+/*********************cambiando imagen filtro hombre******************************/
+//clic cambio img
+//hacer click en filtermen
+//traer el id del espacio de la imagen
+//funcion para cambio por otra
+
+let img = document.getElementById("img-personaje");
+let changefilterimg= document.getElementById("filterMen");
+
+
+function cambiarColor() {
+  let todas = document.querySelectorAll('.individualCard');
+  let color = '#3650a3'
+  for(let i = 0; i < todas.length; i++) 
+  todas[i].style.backgroundColor = color;
+ 
+}   
+function cambiarsombrar() {
+  let todas = document.querySelectorAll('.individualCard');
+  for(let i = 0; i < todas.length; i++) 
+  todas[i].style.boxShadow = 'black';
+ 
+}
+
+changefilterimg.addEventListener("click", function(){
+  img.src = "img/personajesMasculinos.jpg";
+  img.style.boxShadow = "8px 8px 4px #3650a3";
+  document.body.style.backgroundColor = "#fbb615";
+  cambiarColor()
+  cambiarsombrar()
+  
+  }
+)
+/*********************cambiando imagen filtro mujer******************************/
+let changeimgWomen = document.getElementById("filterWomen");
+
+function cambiarColorW() {
+  let todas = document.querySelectorAll('.individualCard');
+  let color = '#98F4F4'
+  for(let i = 0; i < todas.length; i++) 
+  todas[i].style.backgroundColor = color;
+ 
+}  
+
+changeimgWomen.addEventListener("click", function(){
+  img.src = "img/femeninos.jpg";
+  img.style.boxShadow = "8px 8px 4px #98F4F4";
+  document.body.style.backgroundColor = "#E065DA";
+  cambiarColorW()
+  cambiarsombrar()
+  
+  }
+)
+   
+ /***********************estadistica mujeres y hombres***********************/  
+let estadisman = 0;
+let estadiswomen = 0;
+let unknown = 0;
+
+
+for(let i = 0; i < getData.length; i++){
+  if(getData[i].gender === "Male"){
+    estadisman++;
+  }
+}   console.log(estadisman)
+
+
+  
+ 
+ 
+
+
+

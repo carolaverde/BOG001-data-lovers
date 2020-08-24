@@ -14,45 +14,40 @@
   <header>
     <nav class="menuSpace">
       <div class="logo">
-        <img src="img/img-menu.png" alt="imagen-menu">
+        <!--<img src="img/img-menu.png" alt="imagen-menu">-->
         <img class='logoName' src="/img/logor.png" alt="logo">
       </div>
       <div class="enlaces">
         <a href="index.html">inicio</a>
         <a href="Personajes.html">Personajes</a>
-        <a href="Mundo.html">Mundo</a>
+        <a href="estadistica.html">Estadistica</a>
       </div>
-      <!--mennu hamburguesa-->
-      <div class="hamburguesa">
-        <img src="img/menu-alt-right-regular-24.png" alt="" id="hamburguesa">
-
-      </div>
+      
     </nav>
   </header>
 
-  <main class="bloqueInfo">
+  <main class="bloqueInfo" id="infoBloque">
     <!--foto inicio-->
-    <img class="imagenUno" src="/img/Personajes.jpg" alt="photo Rick and Morty"><br>
+    <img class="imagenUno" src="/img/personajes.jpg" alt="photo Rick and Morty" id="img-personaje"><br>
     <!--logo-->
     <!--botones para filtrar-->
     <section class="generalButtons" id="generalButtons">
       <nav class="buttonFilters">
         <ul>
-          <li><a href="#">Genero</a>
+          <li><p class="btn-principal">Genero</p>
             <ul>
-              <li><a href="#" id="filterMen">Masculino</a></li>
-              <li><a href="#" id="filterWomen">Femenino</a></li>
-              <li><a href="#" id="other">Otro</a></li>
-            </ul>
+              <li class="todos"><p class = "btn-filter" id="filterMen" >Masculino</p></li>
+              <li class="todos"><p class = "btn-filter" id="filterWomen">Femenino</p></li>
+           </ul>
           </li>
         </ul>
       </nav>
       <nav class="organizeButton">
         <ul>
-          <li><a href="#">Ordenar</a>
+          <li><p class="btn-principal">Ordenar</p>
             <ul>
-              <li><a href="#" id="organizeAZ">Alfabeticamente A-Z</a></li>
-              <li><a href="#" id="organizeZA">Alfabeticamente Z-A</a></li>
+              <li><p class="todos" id="organizeAZ">Alfabeticamente A-Z</p></li>
+              <li><p class="todos" id="organizeZA">Alfabeticamente Z-A</p></li>
             </ul>
           </li>
         </ul>
@@ -63,18 +58,18 @@
     <!--imagenes botones-->
     <div class="imageArea" id="charactersZone">
 
-      <div class='pruebaTarjeta' id="pruebaTarjeta">
-        <article class="modalWindow" id="modal">
+      <div class='pruebaTarjeta' id="pruebaTarjeta"></div>
+        <div class="modalWindow" id="modal">
           <div class="fondo_transparente">
             <div class="modal">
               <div class="modal_cerrar">
-                <span>x</span>
+                <span class="close" id="close">x</span>
               </div>
               <div class="modal_mensaje">
-                <p></p>
+               
               </div>
+            
             </div>
-          </article>
 
 
         <div id="root"></div>
@@ -84,3 +79,4 @@
 </body>
 
 </html>
+

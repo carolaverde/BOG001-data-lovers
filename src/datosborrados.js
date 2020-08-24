@@ -70,18 +70,93 @@ pruebaTarjeta.innerHTML = modal_mensaje
 }
 
 
-
-
 let infoModal = [];
 for (let i = 0; i < getData.length; i++) {
   infoModal += `<div class= "individualCard" id = "${getData[i].id}" ><img class="photoSola" src="${getData[i].image}" alt=""><p>Name: ${getData[i].name}</p><p>Gender: ${getData[i].gender}</p><p>Species: ${getData[i].species}</p><p>Status: ${getData[i].status}</p>
 </div>`
-  console.log(infoModal)}
+  console.log(infoModal)};
 
 
 
+
+
+/
+
+
+
+/*****************informacion de la modal**************/
 
 
 
   
-  
+
+  document.getElementsByClassName("modal_cerrar")[0].addEventListener("click", function () {
+    document.getElementsByClassName("fondo_transparente")[0].style.display = "none";
+  })
+}
+
+/*document.getElementsByClassName("individualCard").addEventListener("click", function(){
+  document.getElementsByClassName("modal")[0].style.display="block"
+  return false
+})*/
+
+let botonFiltroM = document.getElementById("filterMen").addEventListener("click", function () {
+  let filtrandoM= getData.filter(item =>{
+    return (item.gender === "Male");
+  })
+  console.log("filterM")
+})
+
+let botonFiltrow = document.getElementById("filterWomen").addEventListener("click", function () {
+  let filtrandoW= getData.filter(item =>{
+    return (item.gender === "Female");
+  })
+  console.log("filtrandoW")
+})
+
+
+let botonAZ = document.getElementById("organizeAZ").addEventListener("click", function(){
+  getData.sort(function(a, b) {
+    return a - b;
+  });
+  console.log("botonAZ");
+})
+
+let botonZA = document.getElementById("organizeZA").addEventListener("click", function(){
+  getData.sort(function(a, b) {
+    return a - b;
+  });
+  console.log("botonZA");
+})
+
+ 
+/*function pintarTarjetas(datosPersonajes) {
+  for (let i = 0; i < datosPersonajes.length; i++) {
+  compilado += `<button data-idpersonaje = "${datosPersonajes[i].id}" class= "individualCard" id = "${datosPersonajes[i].id}" ><img data-idpersonaje = "${datosPersonajes[i].id}" class="photoSola" src="${datosPersonajes[i].image}" alt=""><p>Name: ${datosPersonajes[i].name}</p></button>`
+}
+let printImage = document.getElementById('pruebaTarjeta');
+printImage.innerHTML = compilado;
+}
+
+pintarTarjetas(getData);
+/*let botonFiltrow = document.getElementById("filterWomen").addEventListener("click", function () {
+  let filtrandoW= getData.filter(item =>{
+    return (item.gender === "Female");
+  })
+  console.log(filtrandoW)
+
+
+
+/*let botonAZ = document.getElementById("organizeAZ").addEventListener("click", function(){
+  getData.sort(function(a, b) {
+    return a - b;
+  });
+  console.log(botonAZ);*/
+
+
+/*let botonZA = document.getElementById("organizeZA").addEventListener("click", function(){
+  getData.sort(function(a, b) {
+    return a - b;
+  });
+  console.log(botonZA)
+})*/
