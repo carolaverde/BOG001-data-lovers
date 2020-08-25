@@ -9,6 +9,17 @@ body{
   font-family: 'Patrick Hand', cursive;
   Word-wrap: break-Word;  /*para que las palabras no se dividan mal hacia el otro renglon*/
 }
+
+.piedepagina{
+  height: 30px;
+  background-color: black;
+  text-align: center;  
+}
+
+.piedepagina > p{
+  color: white;
+}
+
 /* ***********************************header y menu hamburguesa**********************************************/
 .menuSpace{
   height: 70px;
@@ -220,28 +231,51 @@ nav ul li ul li p:hover {
 }*/
 
 /******************estadistica***********************/
-.statistics{
+.paint_statistics{
+  padding: 50px;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
+  justify-content:space-around;
+  
+  
 }
 
-.estadistica_css{
+
+.estadistica_css{ 
+  width: 270px;
+  height: 400px;
   background-color: blanchedalmond;
-  height: 200px;
-  width: 600px;
-  border-radius: 2em;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  border-radius: 6%;  
+  box-shadow: 5px 5px 3px #c96539;
+   
+}
+
+.space_text{
+ padding: 25px;
+ text-align: center;
   
 }
 
 .radius_estadistica{
-  height: 250px;
-  width: 300px;
+  height: 150px;
+  width: 200px;
   border-radius: 48% 52% 42% 45% / 81% 78% 33% 30% ;
+  margin: 15px;
+  display: flex;
+  justify-content:center;
+  align-items:center  
+  
 }
+
+.verestadistica{
+  padding: 10px;
+  font-weight: 900;
+}
+
+
 
 
 

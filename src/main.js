@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 
-
+  
 
 //import { example } from './data.js';	
 //console.log( example );
@@ -10,6 +10,8 @@ import rickandmorty from './data/rickandmorty/rickandmorty.js';
 const info = data.results
 //console.log(info);
 //se va a pintar los personajes en el html de personajes
+
+
 
 const pruebaTarjeta = document.getElementById('pruebaTarjeta');
 const charactersZone = document.getElementById('charactersZone');
@@ -181,19 +183,19 @@ function cambiarColor() {
   todas[i].style.backgroundColor = color;
  
 }   
-function cambiarsombrar() {
+/*function cambiarsombrar() {
   let todas = document.querySelectorAll('.individualCard');
   for(let i = 0; i < todas.length; i++) 
   todas[i].style.boxShadow = 'black';
  
-}
+}*/
 
 changefilterimg.addEventListener("click", function(){
   img.src = "img/personajesMasculinos.jpg";
   img.style.boxShadow = "8px 8px 4px #3650a3";
   document.body.style.backgroundColor = "#fbb615";
   cambiarColor()
-  cambiarsombrar()
+  //cambiarsombrar()
   
   }
 )
@@ -213,23 +215,53 @@ changeimgWomen.addEventListener("click", function(){
   img.style.boxShadow = "8px 8px 4px #98F4F4";
   document.body.style.backgroundColor = "#E065DA";
   cambiarColorW()
-  cambiarsombrar()
+  //cambiarsombrar()
   
   }
 )
    
- /***********************estadistica mujeres y hombres***********************/  
-let estadisman = 0;
-let estadiswomen = 0;
-let unknown = 0;
+/*********************cambiando imagen ordenar AZ******************************/
+let changeorganizeAZ = document.getElementById("organizeAZ");
 
+function cambiarColorW2() {
+  let todas = document.querySelectorAll('.individualCard');
+  let color = '#2ECC71 ';
+  for(let i = 0; i < todas.length; i++) 
+  todas[i].style.backgroundColor = color;
+ 
+}  
 
-for(let i = 0; i < getData.length; i++){
-  if(getData[i].gender === "Male"){
-    estadisman++;
+changeorganizeAZ.addEventListener("click", function(){
+  img.src = "img/season.jpg";
+  img.style.boxShadow = "8px 8px 4px #2ECC71 ";
+  document.body.style.backgroundColor = "#EBD350";
+  cambiarColorW2()
+  //cambiarsombrar()
+  
   }
-}   console.log(estadisman)
+)
+ 
+/*********************cambiando imagen ordenar ZA******************************/
+let changeorganizeZA = document.getElementById("organizeZA");
 
+function cambiarColor3() {
+  let todas = document.querySelectorAll('.individualCard');
+  let color = '#C9F7FF ';
+  for(let i = 0; i < todas.length; i++) 
+  todas[i].style.backgroundColor = color;
+ 
+}  
+
+changeorganizeZA.addEventListener("click", function(){
+  img.src = "img/ordenaz.jpg";
+  img.style.boxShadow = "8px 8px 4px #C9F7FF ";
+  document.body.style.backgroundColor = "#0088BC";
+  cambiarColor3()
+  //cambiarsombrar()
+  
+  }
+)
+ 
 
   
  

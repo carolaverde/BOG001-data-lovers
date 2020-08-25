@@ -138,25 +138,3 @@ let printImage = document.getElementById('pruebaTarjeta');
 printImage.innerHTML = compilado;
 }
 
-pintarTarjetas(getData);
-/*let botonFiltrow = document.getElementById("filterWomen").addEventListener("click", function () {
-  let filtrandoW= getData.filter(item =>{
-    return (item.gender === "Female");
-  })
-  console.log(filtrandoW)
-
-
-
-/*let botonAZ = document.getElementById("organizeAZ").addEventListener("click", function(){
-  getData.sort(function(a, b) {
-    return a - b;
-  });
-  console.log(botonAZ);*/
-
-
-/*let botonZA = document.getElementById("organizeZA").addEventListener("click", function(){
-  getData.sort(function(a, b) {
-    return a - b;
-  });
-  console.log(botonZA)
-})*/
