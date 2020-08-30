@@ -37,11 +37,11 @@ Teniendo esta información clara, fue mas sencillo establecer las historias de u
 
 Para comenzar el desarrollo del HTML Y CSS, se planteo como sería el diseño de la pagina, ilustrando un primer sketch para revisar la navegación del usuario.
 
-![scket a lapiz];
+![scket a lapiz](https://github.com/carolaverde/BOG001-data-lovers/blob/master/src/img/Sketch%20de%20baja.jpg);
 
 Al revisar que el prototipo de baja cumplia con los objetivos, se diagramo en alta calidad para tener de forma clara el diseño final de la página web.
 
-![scket final];
+![scket final](https://github.com/carolaverde/BOG001-data-lovers/blob/master/src/img/RickandMortyalta.png);
 
 Esta vez te proponemos una serie de datos de diferentes _temáticas_ para que
 explores y decidas con qué temática te interesa trabajar. Hemos elegido
