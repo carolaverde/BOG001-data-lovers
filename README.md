@@ -37,7 +37,7 @@ Teniendo esta información clara, fue mas sencillo establecer las historias de u
 
 Para comenzar el desarrollo del HTML Y CSS, se planteo como sería el diseño de la pagina, ilustrando un primer sketch para revisar la navegación del usuario.
 
-![scket a lapiz](https://github.com/carolaverde/BOG001-data-lovers/blob/master/src/img/Sketch%20de%20baja.jpg);
+![scket a lapiz](https://github.com/carolaverde/BOG001-data-lovers/blob/master/src/img/Sketch%20de%20baja.jpg)
 
 Al revisar que el prototipo de baja cumplia con los objetivos, se diagramo en alta calidad para tener de forma clara el diseño final de la página web.
 
@@ -54,7 +54,7 @@ le ayude a interactuar y entender mejor esos datos.
 
 Al finalizar la página cumplio con las expectativas.
 
-![fotos página];
+
 
 ## 3. Objetivos de aprendizaje
 
