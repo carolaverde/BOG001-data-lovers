@@ -30,7 +30,7 @@ hacerlo es creando _interfaces_ y _visualizaciones_.
 
 Al comenzar el proyecto, lo primero que se realizo fue un análisis de los televidentes para crear tres perfiles diferentes de posibles usuarios, el resultado de este estudio nos sugirió que información desearían obtener los usuarios en la pagina web de Rick and Morty y el diseño de la misma.
 
-[readmeUsuarios](https://github.com/carolaverde/BOG001-data-lovers/blob/master/src/readmeUsuarios.png)
+![readmeUsuarios](https://github.com/carolaverde/BOG001-data-lovers/blob/master/src/img/readmeUsuarios.png)
 
 
 Teniendo esta información clara, fue mas sencillo establecer las historias de usuario, dando respuesta a preguntas básicas : ¿como?,¿quiero? y ¿para?, como por ejemplo : "yo como usuario quiero conocer el porcentaje de genero que presenta la serie para entenderla mejor", e identificar cada una de las tareas que acompañaban estas historias, para de forma ordenada comenzar a desarrollar la página web.

@@ -77,7 +77,7 @@ function CallModal(evento) {
                       <div class="modal_cerrar"><span class="close" id="close">x</span>
                       </div>`
 
-  modal.innerHTML = modal_mensaje
+  modal.innerHTML = modal_mensaje //revisar
 
 }
 /* document.getElementsByClassName("modal_cerrar")[0].addEventListener("click", function () {
