@@ -3,59 +3,89 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width" device-width, initial-scale=1 , maximun-scale=1>
+  <meta name="viewport" content= "width=device-width, initial-scale=1.0">
   <title>Rick and Morty</title>
+  <link rel="icon" type="image/jpg" href="img/img-pestana.png">
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <div class="contenedorUno"> 
+  <header>
+    <nav class="menuSpace">
+      <div class="logo">
+        <!--<img src="img/img-menu.png" alt="imagen-menu">-->
+        <img class='logoName' src="/img/logor.png" alt="logo">
+      </div>
+      <div class="enlaces">
+        <a href="index.html">inicio</a>
+        <a href="Personajes.html">Personajes</a>
+        <a href="estadistica.html">Estadistica</a>
+      </div>
+      
+    </nav>
+  </header>
 
- 
-  <img class="imagenUno" src="index.jpg" class="imagenInicio"> <br>
+  <main class="bloqueInfo">
+    <!--foto inicio-->
+    <img class="imagenUno" src="/img/index.jpg" alt="photo Rick and Morty"><br>
+    <!--logo-->
+    <!--<section class="bannerLogo">
+      <center><img class='logo' src="/img/logor.png" alt="logo"></center>
+    </section>-->
+    <p class="sinopsis">Rick Sánchez es la definición exacta de "científico loco". Es alcohólico, es un genio, es
+      irresponsable y está loco. Rick acaba de mudarse a casa de su hija Beth y allí recuerda que tiene un nieto llamado
+      Morty. Sin preguntar a nadie, decide que va a obligarle a que le acompañe a todo tipo de aventuras para que el
+      chico se vuelva inteligente como él y no se convierta en un idiota como Jerry, padre de Morty y yerno de Rick.
+
+      Así, Rick y Morty comienzan a vivir aventuras intergalácticas a pesar de que la familia no quiere que lo sigan
+      haciendo. Poco a poco tienen que intentar encontrar un equilibrio entre su vida familiar y sus viajes a través del
+      espacio y por distintas realidades paralelas, algo que no es fácil para el pequeño Morty que es incapaz de tener
+      una vida normal al margen de su abuelo.
+
+      Justin Roiland (Hora de aventuras) es el encargado de dar voz a los dos personajes principales: Rick y Morty.
+      Sarah Chalke (Scrubs) interpreta a Beth Smith, Chris Parnell (Archer) es Jerry y Spencer Grammer (Greek) es Summer
+      Smith, la hermana mayor de Morty. En España, el reparto de doblaje está compuesto por Txema Moscoso, Rodri Martín,
+      Héctor Indriago, Susana Damas y Sara Iglesias.</p>
+
+  </main>
+
+  <section class="menuButtons">
+
+    <img type="button" class="pngButtons" id='personajes' src="botonPersonajes.png">
+    <!--el evento del boton que permite pasar a las siguientes paginas-->
+    <script>butt = document.getElementById('personajes').addEventListener('click', goPageCharacters);
+      function goPageCharacters() { window.location.href = 'personajes.html'; } 
+    </script>
+
+
+    <img type="button" class="pngButtons" id='mundos' src="botonMundos.png">
+    <!--el evento del boton que permite pasar a las siguientes paginas-->
+    <script>butt = document.getElementById('mundos').addEventListener('click', goPageWorlds);
+      function goPageWorlds() { window.location.href = 'mundo.html'; } 
+    </script>
+
+
+    <img type="button" class="pngButtons" id='temporadas' src="botonTemporadas.png">
+
+    <!--el evento del boton que permite pasar a las siguientes paginas-->
+   <script>butt= document.getElementById('temporadas').addEventListener('click',goPageSeasons);
+    function goPageSeasons(){ window.location.href = 'temporadas.html';} 
+    </script>
+
+
+  </section>
+
+
+  <br>
+  <br>
+
+
   
-
-    <center> <img class="imagenUno" src="pngegg-12.png" class="imagenInicio"> </center>
-    <br>
-    <br>
-
-    <div class="Sinopsis">
-      <p>Rick is a mentally gifted, but sociopathic and alcoholic scientist and a grandfather to Morty; an awkward,
-        impressionable, and somewhat spineless teenage boy. Rick moves into the family home of Morty, where he
-        immediately
-        becomes a bad influence.</p>
-    </div>
-<div class= "menuButtons">
-   <img type = "button" class="pngButtons" id=toCharacters src="botonPersonajes.png">
-
-    <script> function turnPageC() { window.location.href = 'Personajes.html'; }
-      document.querySelector('#toCharacters').addEventListener('click', turnPageC) 
-    </script>
-
-     <img type= "button" class="pngButtons" id=toWorlds src="botonMundos.png">
-
-    <script> function turnPageW() { window.location.href = 'Mundo.html'; }
-      document.querySelector('#toWorlds').addEventListener('click', turnPageW) 
-    </script>
-
-    <img type= "button" class="pngButtons" id=toSeasons src="botonTemporadas.png">
-
-    <script> function turnPageS() { window.location.href = 'Temporada.html'; }
-      document.querySelector('#toSeasons').addEventListener('click', turnPageS) 
-    </script>
-</div>
-
-
-
-    <br>
-    <br>
-
-
+  <div class="piedepagina">
+    <p> <small> Derechos Reservados | Carolina Laverde &copy; </small> </p>
   </div>
-
-  <div id="root"> <center> Derechos Reservados | Carolina & Natalia &copy; </center> </div>
-
+  <script src="main.js" type="module"></script>
 </body>
 
 </html>
